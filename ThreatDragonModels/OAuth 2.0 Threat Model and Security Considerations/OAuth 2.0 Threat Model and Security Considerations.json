@@ -4,9 +4,10 @@
     "owner": "Team C",
     "description": "security considerations for OAuth, beyond those in the OAuth 2.0 specification, based on a comprehensive threat model for the OAuth 2.0 protocol"
   },
-  
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {}
+    ],
     "diagrams": [
       {
         "title": "OpenID Connect",
@@ -34,7 +35,7 @@
                   "class": "element-shape hasNoOpenThreats isOutOfScope"
                 },
                 "text": {
-                  "text": "End user/Resource\nowner"
+                  "text": "User"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -60,7 +61,7 @@
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "Authorization\nserver"
+                  "text": "Authorization\nserver\n(Keycloak)"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -86,7 +87,7 @@
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "Client - OAuth\nPlayground"
+                  "text": "TPM- WebApp"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -161,7 +162,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "1. Login with Google",
+                      "text": "1. Login with TPM",
                       "font-weight": "400",
                       "font-size": "small"
                     }
