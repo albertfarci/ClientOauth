@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "title": "OAuth 2.0 Threat Model and Security Considerations",
+    "owner": "Team C",
+    "description": "security considerations for OAuth, beyond those in the OAuth 2.0 specification, based on a comprehensive threat model for the OAuth 2.0 protocol"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": []
+  }
+}
