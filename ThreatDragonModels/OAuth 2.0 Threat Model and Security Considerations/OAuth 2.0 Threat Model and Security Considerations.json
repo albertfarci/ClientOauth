@@ -90,6 +90,14 @@
                   "type": "Spoofing",
                   "description": "An attacker may obtain the refresh tokens issued to a web application by way of overcoming the web server's security controls.\n\nImpact: Since a web application manages the user accounts of a\ncertain site, such an attack would result in an exposure of all refresh tokens on that site to the attacker.",
                   "mitigation": "Countermeasures:\n o  Standard web server protection measures).\n o  Use strong client authentication (e.g., client_assertion/\n      client_token) so the attacker cannot obtain the client secret\n      required to exchange the tokens."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Obtaining Access Tokens",
+                  "description": "Depending on the client type, there are different ways that access tokens may be revealed to an attacker.  Access tokens could be stolen from the device if the application stores them in a storage device that is accessible to other applications.\nImpact: Where the token is a bearer token and no additional mechanism is used to identify the client, the attacker can access all resources associated with the token and its scope.",
+                  "type": "Spoofing",
+                  "mitigation": "Countermeasures:\n   o  Keep access tokens in transient memory and limit grants.\n   o  Limit token scope.\n   o  Keep access tokens in private memory or apply same protection\n      means as for refresh tokens.\n   o  Keep access token lifetime short."
                 }
               ],
               "attrs": {
