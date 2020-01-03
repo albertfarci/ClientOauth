@@ -105,6 +105,14 @@
                   "title": "Refresh Token revocation",
                   "description": "https://tools.ietf.org/html/rfc6819#page-58",
                   "type": "Spoofing"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Leaking Authorization \"codes\"",
+                  "type": "Spoofing",
+                  "description": "An attacker could try to eavesdrop transmission of the authorization \"code\" between the authorization server and client.  Furthermore, authorization \"codes\" are passed via the browser, which may unintentionally leak those codes to untrusted web sites and attackers exploring browser history. Web browsers commonly record visited URLs in the browser history.  Another user of the same web browser may be able to view URLs that were visited by previous users.",
+                  "mitigation": "Countermeasures:\no  As per the core OAuth spec, the authorization server as well as\n      the client must ensure that these transmissions are protected\n      using transport-layer mechanisms such as TLS;\no  The authorization server will require the client to authenticate\n      wherever possible, so the binding of the authorization \"code\" to a\n      certain client can be validated in a reliable way\no  Use short expiry time for authorization \"codes\"\no  The authorization server should enforce a one-time usage restriction\no  If an authorization server observes multiple attempts to redeem an authorization \"code\", the authorization server may want to revoke all tokens granted based on the authorization \"code\"\no  In the absence of these countermeasures, reducing scope and expiry time for access tokens can be used to reduce the damage in case of leaks.\no  The client server may reload the target page of the redirect URI in order to automatically clean up the browser cache."
                 }
               ],
               "attrs": {
@@ -214,7 +222,12 @@
               "target": {
                 "id": "cfbb49af-4955-4e67-9aad-a55e25b033b1"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 766,
+                  "y": 225
+                }
+              ],
               "id": "990f236f-94cf-4389-8767-ebbf02d83708",
               "labels": [
                 {
@@ -308,8 +321,28 @@
               },
               "vertices": [
                 {
-                  "x": 669,
-                  "y": 386
+                  "x": 756,
+                  "y": 308
+                },
+                {
+                  "x": 690,
+                  "y": 352
+                },
+                {
+                  "x": 613,
+                  "y": 349
+                },
+                {
+                  "x": 584,
+                  "y": 337
+                },
+                {
+                  "x": 565,
+                  "y": 315
+                },
+                {
+                  "x": 549,
+                  "y": 293
                 }
               ],
               "id": "316e431f-9db9-4a91-8e83-13183505a6e2",
@@ -448,8 +481,12 @@
               },
               "vertices": [
                 {
-                  "x": 676,
-                  "y": 156
+                  "x": 634,
+                  "y": 164
+                },
+                {
+                  "x": 703,
+                  "y": 159
                 }
               ],
               "id": "fc3349ea-e2d7-463c-9d82-299ea5714dd7",
@@ -478,7 +515,7 @@
                   "severity": "High",
                   "title": "CSRF attack against redirect URI",
                   "type": "Spoofing",
-                  "description": "CSRF attacks  on OAuth approvals can allow an attacker to obtain authorization to  OAuth protected resources without the consent of the user.  This attack works against the redirect URI used in the authorization    \"code\" flow.  An attacker could authorize an authorization \"code\" to  their own protected resources on an authorization server.  He then  aborts the redirect flow back to the client on his device and tricks  the victim into executing the redirect back to the client.  The  client receives the redirect, fetches the token(s) from the    authorization server, and associates the victim's client session with  the resources accessible using the token.\n Impact: The user accesses resources on behalf of the attacker.  The effective impact depends on the type of resource accessed.  For example, the user may upload private items to an attacker's  resources.",
+                  "description": "CSRF attacks  on OAuth approvals can allow an attacker to obtain authorization to  OAuth protected resources without the consent of the user.  This attack works against the redirect URI used in the authorization \"code\" flow.  An attacker could authorize an authorization \"code\" to their own protected resources on an authorization server.  He then aborts the redirect flow back to the client on his device and tricks  the victim into executing the redirect back to the client.  The  client receives the redirect, fetches the token(s) from the authorization server, and associates the victim's client session with  the resources accessible using the token.\n Impact: The user accesses resources on behalf of the attacker.  The effective impact depends on the type of resource accessed.  For example, the user may upload private items to an attacker's  resources.",
                   "mitigation": "The first step is creating a unique session token that holds state between your app and the user's client. You later match this unique session token with the \n authentication response returned by the authorization server to verify that the user is making the request and not a malicious attacker."
                 }
               ],
