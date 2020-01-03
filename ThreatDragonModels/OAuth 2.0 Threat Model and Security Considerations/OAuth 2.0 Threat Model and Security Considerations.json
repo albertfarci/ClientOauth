@@ -95,16 +95,9 @@
                   "status": "Open",
                   "severity": "Medium",
                   "title": "Obtaining Access Tokens",
-                  "description": "Depending on the client type, there are different ways that access tokens may be revealed to an attacker.  Access tokens could be stolen from the device if the application stores them in a storage device that is accessible to other applications.\nImpact: Where the token is a bearer token and no additional mechanism is used to identify the client, the attacker can access all resources associated with the token and its scope.",
+                  "description": "An attacker may obtain the refresh tokens issued to a web application by accessing browser session storage.\n\nImpact: Since a web application manages the user accounts of a certain site, such an attack would result in an exposure of user's refresh token on that site to the attacker.",
                   "type": "Spoofing",
-                  "mitigation": "Countermeasures:\n   o  Keep access tokens in transient memory and limit grants.\n   o  Limit token scope.\n   o  Keep access tokens in private memory or apply same protection\n      means as for refresh tokens.\n   o  Keep access token lifetime short."
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "title": "Refresh Token revocation",
-                  "description": "https://tools.ietf.org/html/rfc6819#page-58",
-                  "type": "Spoofing"
+                  "mitigation": "Countermeasures:\n   o  Keep access tokens in transient memory and limit grants.\n   o  Limit token scope.\n   o  Keep access tokens in private memory or apply same protection means as for refresh tokens.\n   o  Keep access token lifetime short."
                 },
                 {
                   "status": "Open",
