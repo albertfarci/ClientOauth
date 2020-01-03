@@ -112,7 +112,8 @@
                   "severity": "Medium",
                   "title": "Cross Site Scripting",
                   "type": "Tampering",
-                  "description": "The 'Web Server' could be subject to a cross-site scripting attack because it lacks the unreliable input sanitization (untrusted) that may contain malicious script"
+                  "description": "The 'Web Server' could be subject to a cross-site scripting attack because it lacks the unreliable input sanitization (untrusted) that may contain malicious script",
+                  "mitigation": "Countermeasures:\n• Escape the HTML text before inserting the untrusted data into the content of the HTML elements.\n• Escaping an attribute value before inserting untrusted data into HTML attributes.\n• Escape JavaScript text before inserting untrusted data into JavaScript code.\n• Execute HTML of JSON values ​​before inserting data into the content of HTML elements and reading the data with \"JSON.parse\".\n• Execute the CSS escape and carry out rigorous validations before inserting the untrusted data in the HTML style property values.\n• Execute the URL before entering untrusted data in the values ​​of the URL parameters.\n• Sanitize HTML Markups with a library designed for this purpose.\n• Use the HTTPOnly flag for cookies.\n• Implement the Content Security Policy.\n• Use an Auto-Escaping Template System.\n• Use the X-XSS-Protection Response Header."
                 }
               ],
               "attrs": {
