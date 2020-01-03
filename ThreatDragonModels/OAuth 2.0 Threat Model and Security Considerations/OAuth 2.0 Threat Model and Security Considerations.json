@@ -106,6 +106,13 @@
                   "type": "Spoofing",
                   "description": "An attacker could try to eavesdrop transmission of the authorization \"code\" between the authorization server and client.  Furthermore, authorization \"codes\" are passed via the browser, which may unintentionally leak those codes to untrusted web sites and attackers exploring browser history. Web browsers commonly record visited URLs in the browser history.  Another user of the same web browser may be able to view URLs that were visited by previous users.",
                   "mitigation": "Countermeasures:\no  As per the core OAuth spec, the authorization server as well as\n      the client must ensure that these transmissions are protected\n      using transport-layer mechanisms such as TLS;\no  The authorization server will require the client to authenticate\n      wherever possible, so the binding of the authorization \"code\" to a\n      certain client can be validated in a reliable way\no  Use short expiry time for authorization \"codes\"\no  The authorization server should enforce a one-time usage restriction\no  If an authorization server observes multiple attempts to redeem an authorization \"code\", the authorization server may want to revoke all tokens granted based on the authorization \"code\"\no  In the absence of these countermeasures, reducing scope and expiry time for access tokens can be used to reduce the damage in case of leaks.\no  The client server may reload the target page of the redirect URI in order to automatically clean up the browser cache."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Cross Site Scripting",
+                  "type": "Tampering",
+                  "description": "The 'Web Server' could be subject to a cross-site scripting attack because it lacks the unreliable input sanitization (untrusted) that may contain malicious script"
                 }
               ],
               "attrs": {
@@ -316,6 +323,10 @@
                 {
                   "x": 756,
                   "y": 308
+                },
+                {
+                  "x": 736,
+                  "y": 326
                 },
                 {
                   "x": 690,
