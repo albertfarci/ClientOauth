@@ -157,8 +157,8 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 834,
-                "y": 14
+                "x": 816,
+                "y": 44
               },
               "target": {
                 "x": 804,
@@ -178,8 +178,8 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "x": 241,
-                "y": 254
+                "x": 240,
+                "y": 259
               },
               "target": {
                 "id": "997ca320-aab5-4f9f-a336-474b5d00a29e"
@@ -193,7 +193,10 @@
               "id": "041ace7d-e41e-47a6-a17e-9667fe18e423",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.46709968279562614,
+                    "offset": 0.52690218334629
+                  },
                   "attrs": {
                     "text": {
                       "text": "1. Login with TPM",
@@ -280,6 +283,10 @@
               },
               "vertices": [
                 {
+                  "x": 821,
+                  "y": 172
+                },
+                {
                   "x": 580,
                   "y": 28
                 }
@@ -288,8 +295,8 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.5024577585060077,
-                    "offset": 14.061286219221074
+                    "distance": 0.5383978320856421,
+                    "offset": -4.596970549086955
                   },
                   "attrs": {
                     "text": {
@@ -382,8 +389,8 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "x": 319,
-                "y": 178
+                "x": 314,
+                "y": 203
               },
               "target": {
                 "x": 808,
@@ -426,17 +433,17 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 351,
-                "y": 559
+                "x": 308,
+                "y": 468
               },
               "target": {
-                "x": 804,
-                "y": 565
+                "x": 693,
+                "y": 444
               },
               "vertices": [
                 {
-                  "x": 573,
-                  "y": 514
+                  "x": 491,
+                  "y": 401
                 }
               ],
               "id": "9e1299d0-9f14-4b06-8d1c-5ae481ad0818",
@@ -450,8 +457,8 @@
                 "height": 100
               },
               "position": {
-                "x": 511,
-                "y": 584
+                "x": 441,
+                "y": 433
               },
               "angle": 0,
               "id": "766e6927-454a-436c-88ed-33ac55136d50",
@@ -534,16 +541,16 @@
               },
               "vertices": [
                 {
-                  "x": 491,
-                  "y": 418
+                  "x": 485,
+                  "y": 387
                 }
               ],
               "id": "08266558-516d-4c7c-b338-6a3794dbeaf6",
               "labels": [
                 {
                   "position": {
-                    "distance": 0.41369372388278663,
-                    "offset": 27.431549503002316
+                    "distance": 0.42904753250756683,
+                    "offset": 1.4918751572801303
                   },
                   "attrs": {
                     "text": {
