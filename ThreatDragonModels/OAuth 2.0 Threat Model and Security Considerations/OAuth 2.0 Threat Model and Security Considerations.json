@@ -232,7 +232,10 @@
               "id": "990f236f-94cf-4389-8767-ebbf02d83708",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.44575521469507984,
+                    "offset": -0.6335137185367397
+                  },
                   "attrs": {
                     "text": {
                       "text": "2. Redirect to\nAuthroization server",
@@ -326,24 +329,12 @@
                   "y": 308
                 },
                 {
-                  "x": 736,
-                  "y": 326
-                },
-                {
                   "x": 690,
                   "y": 352
                 },
                 {
                   "x": 613,
                   "y": 349
-                },
-                {
-                  "x": 584,
-                  "y": 337
-                },
-                {
-                  "x": 565,
-                  "y": 315
                 },
                 {
                   "x": 549,
@@ -353,7 +344,10 @@
               "id": "316e431f-9db9-4a91-8e83-13183505a6e2",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.5042351109907821,
+                    "offset": 8.500253484781837
+                  },
                   "attrs": {
                     "text": {
                       "text": "5. Redirect URI with\nauthorization code",
@@ -488,18 +482,14 @@
                 {
                   "x": 634,
                   "y": 164
-                },
-                {
-                  "x": 703,
-                  "y": 159
                 }
               ],
               "id": "fc3349ea-e2d7-463c-9d82-299ea5714dd7",
               "labels": [
                 {
                   "position": {
-                    "distance": 0.3214625569676272,
-                    "offset": -12.933573520276695
+                    "distance": 0.4224975733568249,
+                    "offset": 2.920486869843634
                   },
                   "attrs": {
                     "text": {
